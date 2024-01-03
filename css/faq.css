@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --red: #D62E2E;
+    --red-hover: #ab2c2c;
+    --white: #FFFFFF;
+    --black: #131313;
+    --grey: #ACACAC;
+    --transition: 0.3s ease all;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #FFFFFF;
+    overflow-x: hidden;
+    background-color: var(--black);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+/* main-components */
+
+.btn {
+    border-radius: 6px;
+    transition: 0.3s ease all;
+    padding: 8px 25px;
+    font-size: 14px;
+    color: var(--white);
+}
+
+.main-btn {
+    background-color: var(--red);
+}
+
+.main-btn:hover {
+    background-color: var(--red-hover);
+    color: var(--white);
+}
+
+.secondary-btn {
+    border: 1px solid var(--white);
+}
+
+.secondary-btn:hover {
+    background: white;
+    color: var(--red);
+}
+
+.transition {
+    transition: 0.3s ease all;
+}
+
+.section-padding {
+    padding: 120px 0;
+}
+
+hr {
+    color: #ded2d29e;
+}
+
+@media (max-width: 767px) {
+    .section-padding {
+        padding: 70px 35px;
+    }
+}
+
+
+/* nav */
+nav {
+    font-size: 14px;
+    z-index: 100;
+    transition: var(--transition);
+}
+
+nav .nav-item {
+    padding: 7px 12px;
+}
+
+nav .nav-item a {
+    font-weight: 300;
+    transition: var(--transition);
+    color: var(--white) !important;
+}
+
+nav .nav-link.active-nav {
+    font-weight: 600;
+}
+
+nav .nav-link {
+    border-bottom: 1px solid transparent;
+}
+
+nav .nav-link:hover, nav .nav-link.active-nav  {
+    border-bottom: 1px solid var(--red);
+}
+
+nav .navbar-toggler-icon {
+    background-image: url(../images/nav-menu.png);
+}
+
+.btn-close {
+    background-image: url(../images/x.png);
+    opacity: 1;
+}
+
+.btn-close:hover {
+    opacity: 1;
+}
+
+.offcanvas {
+    border-left: 1px solid #444444 ;
+}
+
+.offcanvas-header {
+    padding: 15px 25px;
+}
+
+
+@media (max-width: 992px) {
+    .sidebar {
+        background-color: #131313;
+    }
+
+    nav .nav-item {
+        padding: 16px 20px;
+        font-size: 16px;
+    }
+
+    nav .login {
+        width: 100%;
+    }
+}
+
+.black-background {
+    background-color: #121212 !important;
+    box-shadow: 1px 3px 16px 7px #00000052;
+}
+
+.scroll-down a {
+    width: 33px;
+    height: 33px;
+    background: white;
+    margin: 5px;
+    text-align: center;
+    padding: 7px;
+    border-radius: 50%;
+    font-size: 14px;
+    opacity: 0.7;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.scroll-down a:hover {
+    opacity: 1;
+}
+
+.scroll-down a i {
+    color: var(--black);
+}
+
+/* end-main-components */
+
+/* faq-landing */
+.faq-landing {
+    background-image: url(../images/FAQ-background.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.faq-landing .content {
+    padding-right: 10%;
+}
+
+.faq-landing div {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.faq-landing h2 {
+    font-weight: 600;
+    font-size: 76px;
+}
+
+.faq-landing h2 span {
+    color: #B72323;
+}
+
+@media (max-width: 767px) {
+    .faq-landing {
+        background-image: url(../images/FAQ-background-mobile.png);
+        min-height: 100vh;
+    }
+
+    .faq-landing div {
+        font-size: 14px;
+    }
+
+    .faq-landing h2 {
+        font-size: 36px;
+    }
+
+    .faq-landing .content {
+        padding-right: 40%;
+        margin-top: 30px;
+    }
+}
+
+/* accordion */
+.faq-container {
+    border-bottom: 1px solid #404040;
+} 
+
+.question {
+    font-size: 22px;
+    padding: 20px 80px 20px 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+  
+.question::after {
+    content: "\002B";
+    font-size: 26px;
+    font-weight: 300;
+    position: absolute;
+    right: 20px;
+    transition: 0.2s;
+}
+  
+.question.active::after {
+    transform: rotate(45deg);
+}
+  
+.answercont {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+}
+  
+.answer {
+    padding: 0 20px 20px;
+    line-height: 1.5rem;
+}
+  
+.question.active + .answercont {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--grey);
+}
+
+@media (max-width: 767px) {
+    .question {
+        font-size: 18px;
+    }
+}
+
+
+/* follow-us-section */
+
+.follow-us {
+    background-image: url(../images/faq.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.follow-us .top-title {
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.follow-us h3 {
+    font-size: 40px;
+}
+
+.follow-us p {
+    font-size: 18px;
+    font-weight: 500;
+    padding-right: 63%;
+}
+
+.follow-us .under-line {
+    width: 70px;
+    height: 2px;
+    background-color: white;
+    margin-top: -5px;
+    margin-bottom: 25px
+}
+
+
+@media (max-width: 767px) {
+    .follow-us {
+        background-image: url(../images/faq-mobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .follow-us .top-title {
+        font-size: 14px;
+    }
+
+    .follow-us h3 {
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    .follow-us .under-line {
+        width: 100px;
+        height: 1px;
+    }
+
+    .follow-us p {
+        font-weight: 300;
+        padding-right: 45%;
+    }
+}
+
+/* get-started */
+.get-started {
+    background-image: url(../images/how-to-start.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.get-started .content {
+    padding-right: 3%;
+}
+
+.get-started .bottom-p {
+    padding-right: 13%;
+}
+
+@media (max-width: 992px) {
+    .get-started {
+        background: none;
+    }
+
+    .get-started img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .get-started .content {
+        padding-right: 34%;
+    }
+
+    .get-started .bottom-p {
+        padding-right: 0;
+    }
+}
+
+/* steps */
+.steps div, p {
+    font-weight: 300;
+}
+
+.steps h2 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.steps h2 span {
+    color: #B72323;
+}
+
+
+.steps p {
+    padding-right: 20%;
+}
+
+
+@media (max-width: 767px) {
+    .steps h2 {
+        font-size: 20px;
+    }
+
+    .steps img {
+        height: 50px;
+    }
+
+    .steps p {
+        font-size: 16px;
+    }
+}
+
+/* table */
+.table-sec .head-title div {
+    font-weight: 300;
+}
+
+.table-sec .head-title h2 {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.table-sec .info {
+    border-left: 1px solid #404040;
+    padding-left: 15px;
+    margin-top: 50px;
+}
+
+.table-sec .info h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.table-sec .info div {
+    font-weight: 300;
+}
+
+@media (max-width: 767px) {
+    .table-sec .head-title div {
+        font-size: 14px;
+    }
+
+    .table-sec .head-title h2 {
+        font-size: 22px;
+    }
+
+    .table-sec .info h3, .table-sec .info div {
+        font-size: 14px;
+    }
+
+    .table-sec .info {
+        margin-top: 30px; 
+    }
+}
+
+/* footer */
+footer {
+    background-color: #000000;
+}
+
+footer h4 {
+    font-size: 22px;
+    position: relative;
+    margin-bottom: 40px;
+    font-weight: 400;
+    color: var(--white);
+}
+
+footer h4:before {
+    position: absolute;
+    content: '';
+    background-color: #B72323;
+    width: 60px;
+    height: 3px;
+    bottom: -12px;
+}
+
+footer div, footer a {
+    color: #999999;
+}
+
+footer .link {
+    border-bottom: 1px dashed #6666664D;
+    padding: 8px 0;
+}
+
+footer a {
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: var(--white);
+}
+
+footer form input {
+    background-color: #0E0E0E;
+    border: 1px solid #2D2D2D;
+    padding: 9px;
+    transition: var(--transition);
+    width: 173px;
+    color: var(--white);
+    font-size: 14px;
+}
+
+footer form input::placeholder {
+    font-size: 14px;
+}
+
+footer form input:focus {
+    outline: none;
+    border: 1px solid #7d79799c;
+}
+
+footer form button {
+    border: none;
+    padding: 8px 12px;
+    margin-left: -6px;
+    transition: var(--transition);
+}
+
+footer .icon {
+    border: 1px solid;
+    padding: 4px 10px;
+    margin: 0 5px;
+}
+
+footer .copy-rights a {
+    color: #B72323;
+    transition: var(--transition);
+}
+
+footer .copy-rights a:hover {
+    color: var(--white);
+}
+
+@media (max-width: 767px) {
+    footer h4 {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    footer div , footer a {
+        font-size: 14px;
+    }
+
+    footer .copy-rights div {
+        font-size: 14px;
+    }
+}
+

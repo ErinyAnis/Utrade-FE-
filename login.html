@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vendor/bootstrap-5.3.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="vendor/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <title>login | Utrade</title>
+</head>
+<body>
+    <!-- navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-transparent">
+            <div class="container">
+              <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="logo">
+              </a>
+              <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <!-- sidebar -->
+            <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+              <!-- sidebar header -->
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="images/logo.png" alt="logo"></h5>
+                <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+              <!-- sidebar body -->
+            <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+                <ul class="navbar-nav justify-content-lg-end align-items-start flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="how-to-start.html">How to start</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact-us.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="login d-flex mt-auto mt-lg-0 justify-content-center">
+                      <div class="nav-item">
+                          <a class="nav-link active-nav" href="login.html">Login</a>
+                      </div>
+                      <div class="nav-item">
+                          <a href="register.html" class="btn main-btn">Register</a>
+                      </div>
+                  </li>
+                </ul>
+            </div>
+          </div>
+          </div>
+        </nav>
+       
+      </header>
+
+
+    <div class="login-form section-padding ">
+        <div class="row form-holder container mx-auto">
+            <div class="col-12 col-lg-6 form-container">
+                <img src="images/login-logo.png" alt="logo">
+                <h3 class="dark-color">Welcome back!</h3>
+                <p class="grey-color">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                <form id="login-validtion" action="" method="post">
+                    <div class="input-container">
+                        <input class="d-block" type="email" name="email" placeholder="Email">
+                        <input class="d-block" type="password" name="password" placeholder="Password">
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mt-4">
+                        <div class="form-check">
+                            <input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">Remember me</label>
+                        </div>
+                        <a class="forget-password grey-color" href="forgot-password.html">Forgot Password?</a>
+                    </div>
+                    <button class="login" type="submit">Login</button>
+                        <div class="create-account grey-color d-flex align-items-center justify-content-center">
+                            <div>Don’t have an account?</div>
+                            <a href="sign-up.html" class="ms-2 orange-color">Get Started</a>
+                        </div>
+                </form>
+            </div>
+            <div class="col-md-6 d-none d-lg-block img-holder">
+                <img src="images/login.png" alt="image">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="vendor/jquery/jquery.js"></script>
+    <script src="vendor/bootstrap-5.3.0-dist/js/bootstrap.js"></script>
+    <script src="vendor/jquery-validate/jquery.validate.min.js"></script>
+    <script src="js/form-validate.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

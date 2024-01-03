@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --red: #D62E2E;
+    --red-hover: #ab2c2c;
+    --white: #FFFFFF;
+    --black: #131313;
+    --grey: #ACACAC;
+    --transition: 0.3s ease all;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #FFFFFF;
+    overflow-x: hidden;
+    background-color: var(--black);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+/* main-components */
+
+.btn {
+    border-radius: 6px;
+    transition: 0.3s ease all;
+    padding: 8px 25px;
+    font-size: 14px;
+    color: var(--white);
+}
+
+.main-btn {
+    background-color: var(--red);
+}
+
+.main-btn:hover {
+    background-color: var(--red-hover);
+    color: var(--white);
+}
+
+.secondary-btn {
+    border: 1px solid var(--white);
+}
+
+.secondary-btn:hover {
+    background: white;
+    color: var(--red);
+}
+
+.transition {
+    transition: 0.3s ease all;
+}
+
+.section-padding {
+    padding: 50px 0;
+}
+
+hr {
+    color: #ded2d29e;
+}
+
+@media (max-width: 767px) {
+    .section-padding {
+        padding: 50px 35px;
+    }
+}
+
+
+/* nav */
+nav {
+    font-size: 14px;
+    z-index: 100;
+    transition: var(--transition);
+}
+
+nav .nav-item {
+    padding: 7px 12px;
+}
+
+nav .nav-item a {
+    font-weight: 300;
+    transition: var(--transition);
+    color: var(--white) !important;
+}
+
+nav .nav-link.active-nav {
+    font-weight: 600;
+}
+
+nav .nav-link {
+    border-bottom: 1px solid transparent;
+}
+
+nav .nav-link:hover, nav .nav-link.active-nav  {
+    border-bottom: 1px solid var(--red);
+}
+
+nav .navbar-toggler-icon {
+    background-image: url(../images/nav-menu.png);
+}
+
+.btn-close {
+    background-image: url(../images/x.png);
+    opacity: 1;
+}
+
+.btn-close:hover {
+    opacity: 1;
+}
+
+.offcanvas {
+    border-left: 1px solid #444444 ;
+}
+
+.offcanvas-header {
+    padding: 15px 25px;
+}
+
+
+@media (max-width: 992px) {
+    .sidebar {
+        background-color: #131313;
+    }
+
+    nav .nav-item {
+        padding: 16px 20px;
+        font-size: 16px;
+    }
+
+    nav .login {
+        width: 100%;
+    }
+}
+
+.black-background {
+    background-color: #121212 !important;
+    box-shadow: 1px 3px 16px 7px #00000052;
+}
+
+.scroll-down a {
+    width: 33px;
+    height: 33px;
+    background: white;
+    margin: 5px;
+    text-align: center;
+    padding: 7px;
+    border-radius: 50%;
+    font-size: 14px;
+    opacity: 0.7;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.scroll-down a:hover {
+    opacity: 1;
+}
+
+.scroll-down a i {
+    color: var(--black);
+}
+
+/* end-main-components */
+
+
+/* login */
+
+.login-container {
+    background-color: #222222;
+    border-radius: 20px;
+}
+
+.login-container .login-img {
+    width: 100%;
+}
+
+
+/* form */
+.login-form .form-holder {
+    box-shadow: 2px 4px 11px 0px #5f53530f;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #222222;
+    margin: 0;
+}
+
+.login-form .form-holder .form-container {
+    padding: 50px;
+}
+
+.login-form .form-holder .img-holder {
+    max-height: 650px;
+}
+
+.login-form .form-holder .img-holder img {
+    margin-top: -10px;
+}
+
+.login-form h3 {
+    font-weight: 600;
+    font-size: 28px;
+    margin: 70px 0 15px 0;
+}
+
+.login-form form .input-container input {
+    width: 100%;
+    margin: 8px 0;
+    border: 1px solid #353535;
+    padding: 10px 15px;
+    border-radius: 6px;
+    background-color: #131313;
+    color: #888888;
+}
+
+.login-form form input::placeholder {
+    color: #888888;
+    font-size: 14px;
+}
+
+.login-form form input:focus {
+    border: 1px solid #5e5b5bde;
+    outline: none;
+}
+
+.login-form .form-check input {
+    cursor: pointer;
+    border: 1px solid var(--grey);
+    border-radius: 3px;
+    background-color: var(--black);
+}
+
+.login-form .forget-password {
+    transition: var(--transition);
+}
+
+.login-form .forget-password:hover {
+    color: var(--red);
+}
+
+.login-form .login {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    transition: 0.3s;
+    color: var(--white);
+}
+
+.login-form .login {
+    background-color: var(--red);
+}
+
+.login-form .login:hover {
+    background-color: var(--red-hover);
+}
+
+.login-form .create-account {
+    margin-top: 21%;
+}
+
+.login-form .create-account a {
+    color: var(--red-hover);
+    transition: var(--transition);
+}
+
+.login-form .create-account a:hover {
+    color: var(--white);
+}
+
+.login-form .form-check-label {
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .forgot-password-container {
+        margin-top: 0;
+    }
+
+    .reset-password-container {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .login-form h3 {
+        font-size: 24px;
+    }
+
+    .login-form p {
+        font-size: 16px;
+    }
+
+    .login-form form input::placeholder, .login-form .form-check .form-check-label, .login-form .forget-password {
+        font-size: 14px !important;
+    }
+
+    .login-form .form-check .form-check-label {
+        font-size: 18px;
+    }
+
+    .login-form .create-account {
+        font-size: 14px;
+    }
+    
+}
+
+label.error {
+    font-size: 14px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* .sign-up-img {
+    z-index: -2;
+} */
+
+.img-content {
+    position: absolute;
+    top: 40%;
+    padding: 0 10%;
+}
+
+.img-content h2 {
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.img-content p {
+    padding-right: 20%;
+}
+
+
+
+/* custom-select */
+.dropdown-list{
+	position: relative
+}
+
+.selected-option{
+	border: 1px solid #353535;
+	padding: 11px 12px;
+	background: var(--black) url('../images/arrow.png') no-repeat;
+	background-position: center right;
+	background-origin: content-box;
+	cursor: pointer;
+    border-radius: 6px;
+    margin-top: 8px;
+}
+
+.selected-option p {
+	margin: 0;
+    color: #888888;
+    font-size: 14px;
+}
+
+.select-option-card{
+	background: var(--black);
+	border: 1px solid var(--black);
+	position: absolute;
+	width: 100%;
+	top: 55px;
+	display: none; /**hide now**/
+	z-index: 10;
+    border-radius: 6px;
+}
+
+.select-option-card ul{
+	list-style-type: none;
+	margin: 0;
+    padding: 15px;
+}
+
+.select-option-card ul li{
+	padding: 10px 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.select-option-card ul li:hover{
+background: var(--grey);
+color: var(--black);
+}

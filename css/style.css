@@ -1,0 +1,801 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --red: #D62E2E;
+    --red-hover: #ab2c2c;
+    --white: #FFFFFF;
+    --black: #131313;
+    --transition: 0.3s ease all;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #FFFFFF;
+    overflow-x: hidden;
+    background-color: var(--black);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+/* main-components */
+
+.btn {
+    border-radius: 6px;
+    transition: 0.3s ease all;
+    padding: 8px 25px;
+    font-size: 14px;
+    color: var(--white);
+}
+
+.main-btn {
+    background-color: var(--red);
+}
+
+.main-btn:hover {
+    background-color: var(--red-hover);
+    color: var(--white);
+}
+
+.secondary-btn {
+    border: 1px solid var(--white);
+}
+
+.secondary-btn:hover {
+    background: white;
+    color: var(--red);
+}
+
+.transition {
+    transition: 0.3s ease all;
+}
+
+.section-padding {
+    padding: 130px 0;
+}
+
+hr {
+    color: #ded2d29e;
+}
+
+@media (max-width: 767px) {
+    .section-padding {
+        padding: 70px 35px;
+    }
+}
+
+
+/* nav */
+nav {
+    font-size: 14px;
+    z-index: 100;
+    transition: var(--transition);
+}
+
+nav .nav-item {
+    padding: 7px 12px;
+}
+
+nav .nav-item a {
+    font-weight: 300;
+    transition: var(--transition);
+    color: var(--white) !important;
+}
+
+nav .nav-link.active-nav {
+    font-weight: 600;
+}
+
+nav .nav-link {
+    border-bottom: 1px solid transparent;
+}
+
+nav .nav-link:hover, nav .nav-link.active-nav  {
+    border-bottom: 1px solid var(--red);
+}
+
+nav .navbar-toggler-icon {
+    background-image: url(../images/nav-menu.png);
+}
+
+.btn-close {
+    background-image: url(../images/x.png);
+    opacity: 1;
+}
+
+.btn-close:hover {
+    opacity: 1;
+}
+
+.offcanvas {
+    border-left: 1px solid #444444 ;
+}
+
+.offcanvas-header {
+    padding: 15px 25px;
+}
+
+
+@media (max-width: 992px) {
+    .sidebar {
+        background-color: #131313;
+    }
+
+    nav .nav-item {
+        padding: 16px 20px;
+        font-size: 16px;
+    }
+
+    nav .login {
+        width: 100%;
+    }
+}
+
+
+.black-background {
+    background-color: #121212 !important;
+    box-shadow: 1px 3px 16px 7px #00000052;
+}
+
+/* end-main-components */
+
+/* home-landing */
+.home-landing {
+    margin-top: -60px;
+    background-image: url(../images/home-landing.png);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home-landing .home-landing-content {
+    width: 40%;
+    margin-top: 10%;
+}
+
+.home-landing .home-landing-content h2, .home-landing .home-landing-content h1 {
+    line-height: 73px;
+}
+
+.home-landing .home-landing-content h2 {
+    font-weight: 600;
+    font-size: 76px;
+}
+
+.home-landing .home-landing-content h1 {
+    font-size: 100px;
+}
+
+.home-landing .home-landing-content p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+@media (max-width: 767px) {
+    .home-landing {
+        background-image: url(../images/home-landing-mobile.png);
+    }
+
+    .home-landing .home-landing-content {
+        width: 100%;
+        margin-top: 25%;
+    }
+
+    .home-landing .home-landing-content h2, .home-landing .home-landing-content h1 {
+        line-height: 40px;
+    }
+
+    .home-landing .home-landing-content h2 {
+        font-size: 34px;
+        margin-bottom: 0;
+        margin-top: 20px;
+    }
+
+    .home-landing .home-landing-content h1 {
+        font-size: 46px;
+    }
+
+    .home-landing .home-landing-content p {
+        font-size: 16px;
+        padding-right: 35%;
+        margin-bottom: 80px !important;
+    }
+}
+
+/* counter */
+.counter-sec {
+    background-image: url(../images/home-counter-bg.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.counter-sec .counter-content h3 {
+    font-weight: 700;
+    font-size: 48px;
+}
+
+.counter-sec .counter-content p {
+    font-size: 24px;
+    padding-right: 25%;
+}
+
+.counter-sec .counter-content .number {
+    font-weight: 700;
+    font-size: 52px;
+}
+
+.counter-sec .counter-content .title {
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.counter-sec .counter-content {
+    margin-bottom: 100px;
+}
+
+.counter-sec .counter-content .counter-holder {
+    cursor: pointer;
+    transition: var(--transition);
+    width: 50%;
+    border-bottom: 1px solid transparent;
+}
+
+.counter-sec .counter-content .counter-holder:hover {
+    border-bottom: 1px solid var(--red);
+}
+
+@media (max-width: 767px) {
+    .counter-sec .counter-content h3 {
+        font-size: 24px;
+    }
+
+    .counter-sec .counter-content p, .counter-sec .counter-content .title {
+        font-size: 14px;
+    }
+
+    .counter-sec .counter-content .number {
+        font-size: 36px;
+    }
+
+    .counter-sec .counter-content .counter-holder {
+        width: 70%;
+    }
+
+}
+
+/* how-to-start  */
+.how-to-start {
+    background-color: #440303;
+}
+
+.how-to-start .content {
+    padding: 14% 0;
+}
+
+.how-to-start div {
+    font-size: 14px;
+}
+
+.how-to-start h3 {
+    font-weight: 700;
+    font-size: 48px;
+}
+
+.how-to-start p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.how-to-start img {
+    margin-top: -80px;
+    margin-left: 40px;
+}
+
+@media (max-width: 992px) {
+    .how-to-start img {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .how-to-start h3 {
+        font-size: 24px;
+    }
+
+    .how-to-start p {
+        font-size: 14px;
+    }
+
+    .how-to-start .img-holder {
+        overflow: hidden;
+    }
+
+    .how-to-start img {
+        max-height: 380px;
+        margin-left: 0;
+    }
+}
+
+/* utrade-funding process */
+.utrade-funding {
+    background-image: url(../images/home-utrade-funding.png);
+    background-position: center;
+}
+
+.utrade-funding .title-container {
+    background-image: url(../images/utrade-funding-title-bg.png);
+    background-position: center;
+}
+
+.utrade-funding .title-container .title div {
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.utrade-funding .title-container .title h2 {
+    font-weight: 700;
+    font-size: 42px;
+}
+
+.utrade-funding .title h2:before, .utrade-funding .title h2:after {
+    vertical-align: -11%;
+}
+
+.utrade-funding .title h2:before {
+    content: url("../images/utrade-title-left.png");
+    margin-right: 50px;
+}
+
+.utrade-funding .title h2:after {
+    content: url("../images/utrade-title-rigth.png");
+    margin-left: 50px;
+}
+
+/* cards */
+.utrade-funding .card-container {
+    margin-top: 120px;
+}
+
+.utrade-funding .utrade-card {
+    width: 49%;
+    background-color: #222222;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.utrade-funding .utrade-card h4 {
+    font-size: 36px;
+}
+
+.utrade-funding  .utrade-card p {
+    font-size: 18px;
+}
+
+.utrade-funding .second-card {
+    top: 200px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.utrade-funding .third-card {
+    background-color: #5A1212;
+    border: 1px solid #9E1D1D;
+    position: relative;
+}
+
+.utrade-funding .third-card .lines {
+    position: absolute;
+    z-index: 0;
+    left: -170px;
+    top: 0;
+}
+
+@media (max-width: 992px) {
+    /* title */
+    .utrade-funding .title-container .title div {
+        font-size: 14px;
+    }
+
+    .utrade-funding .title-container .title h2 {
+        font-size: 24px;
+    } 
+
+    .utrade-funding .title h2:before {
+        margin-right: 15px;
+    }
+
+    .utrade-funding .title h2:after {
+        margin-left: 15px;
+    }
+
+    .utrade-funding .title h2:before, .utrade-funding .title h2:after {
+        vertical-align: -46%;
+    }
+
+    /* cards */
+    .utrade-funding .utrade-card {
+        width: 100%;
+    }
+
+    .utrade-funding .second-card {
+        top: 0;
+        margin-top: 20px;
+        margin-left: 0;
+        position: relative;
+    }    
+}
+
+@media (max-width: 767px) {
+
+    .utrade-funding .title-container .title h2 {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .utrade-funding .title h2:before, .utrade-funding .title h2:after {
+        vertical-align: 8%;
+    }
+
+    .utrade-funding .title h2:before {
+        content: url("../images/utrade-title-left-mobile.png");
+    }
+
+    .utrade-funding .title h2:after {
+        content: url("../images/utrade-title-right-mobile.png");
+    }
+
+    .utrade-funding .card-container {
+        margin-top: 50px;
+    }
+
+    .utrade-funding .utrade-card .head .num {
+        max-height: 35px;
+    }
+
+    .utrade-funding .utrade-card h4 {
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+
+    .utrade-funding  .utrade-card p {
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    .utrade-funding .third-card .lines {
+        left: -270px;
+    }
+}
+
+/* join-us */
+.join-us {
+    background-image: url(../images/home-join-us.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.join-us .head {
+    font-size: 24px;
+}
+
+.join-us h4 {
+    font-size: 48px;
+    margin-top: -5px;
+}
+
+.join-us .line {
+    width: 100px;
+    height: 2px;
+    background: white;
+    margin: auto;
+}
+
+.join-us p {
+    font-weight: 300;
+    font-size: 18px;
+    padding: 0 30%;
+}
+
+@media (max-width: 767px) {
+    .join-us .head {
+        font-size: 14px;
+    }
+
+    .join-us h4 {
+        font-size: 24px;
+        margin-top: -2px;
+    }
+
+    .join-us p {
+        font-size: 16px;
+        padding: 0 23%;
+    }
+}
+
+/* table */
+.table-title div {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.table-title h3 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.toggle {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.toggle + label {
+    --toggle-color: var(--red);
+    --toggle-bg-color: #2C2C2C;
+    position: relative;
+    padding-left: 93px;
+    line-height: 2.5rem;
+    cursor: pointer;
+}
+  
+  /* The toggle container */
+.toggle + label:before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    width: 4.5rem;
+    height: 2.5rem;
+    border-radius: 1.25rem;
+    background-color: var(--toggle-bg-color);
+    transition: background-color 200ms;
+}
+  
+/* The toggle ball */
+.toggle + label:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0.25rem;
+    width: 2rem;
+    height: 2rem;
+    margin: auto;
+    transform: translate(0, 0);
+    border-radius: 50%;
+    background-color: var(--toggle-color);
+    cursor: pointer;
+    transition: transform 200ms;
+}
+  
+/* The active styling */
+    .toggle:checked + label {
+    --toggle-color: #2C2C2C;
+    --toggle-bg-color: var(--red);
+}
+
+.toggle:checked + label:after {
+    transform: translate(2rem, 0);
+}
+
+label {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* table-buttons */
+.table-buttons button {
+    margin: 0 10px;
+    padding: 10px 27px;
+    width: 145px;
+}
+
+.table-buttons button:hover, .table-buttons button.active {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.table {
+    --bs-table-bg: #2C2C2C;
+}
+
+.table .table-head {
+    background-color: #212121;
+}
+
+.table div {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.table h4 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.table > thead {
+    vertical-align: middle;
+}
+
+.table th {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.table td {
+    text-align: center;
+}
+
+.table > :not(caption) > * > * {
+    padding: 15px 35px;
+}
+
+.table-bordered > :not(caption) > * > * {
+    border: 3px solid #4F4F4F;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    --bs-table-bg-type: #474b506e;
+}
+
+@media (max-width: 1193px) { 
+    .table > :not(caption) > * > * {
+        padding: 14px 30px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .table-buttons .second-row {
+        margin-top: 15px;
+    } 
+
+}
+
+@media (max-width: 767px) {
+    .table-title div {
+        font-size: 14px;
+    }
+    
+    .table-title h3 {
+        font-size: 24px;
+    }
+
+    .toggle + label:before {
+        width: 4rem;
+        height: 2rem;
+        top: 5px;
+    }
+
+    .toggle + label:after {
+        top: 1px;
+        left: 0.25rem;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    .table h4 {
+        font-size: 18px;
+    }
+
+    .table > :not(caption) > * > * {
+        padding: 14px 33px;
+        font-size: 14px;
+    }
+
+    .table-buttons button {
+        font-size: 12px;
+    }
+    
+}
+
+/* footer */
+footer {
+    background-color: #000000;
+}
+
+footer h4 {
+    font-size: 22px;
+    position: relative;
+    margin-bottom: 40px;
+    font-weight: 400;
+    color: var(--white);
+}
+
+footer h4:before {
+    position: absolute;
+    content: '';
+    background-color: #B72323;
+    width: 60px;
+    height: 3px;
+    bottom: -12px;
+}
+
+footer div, footer a {
+    color: #999999;
+}
+
+footer .link {
+    border-bottom: 1px dashed #6666664D;
+    padding: 8px 0;
+}
+
+footer a {
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: var(--white);
+}
+
+footer form input {
+    background-color: #0E0E0E;
+    border: 1px solid #2D2D2D;
+    padding: 9px;
+    transition: var(--transition);
+    width: 173px;
+    color: var(--white);
+    font-size: 14px;
+}
+
+footer form input::placeholder {
+    font-size: 14px;
+}
+
+footer form input:focus {
+    outline: none;
+    border: 1px solid #7d79799c;
+}
+
+footer form button {
+    border: none;
+    padding: 8px 12px;
+    margin-left: -6px;
+    transition: var(--transition);
+}
+
+footer .icon {
+    border: 1px solid;
+    padding: 4px 10px;
+    margin: 0 5px;
+}
+
+footer .copy-rights a {
+    color: #B72323;
+    transition: var(--transition);
+}
+
+footer .copy-rights a:hover {
+    color: var(--white);
+}
+
+@media (max-width: 767px) {
+    footer h4 {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    footer div , footer a {
+        font-size: 14px;
+    }
+
+    footer .copy-rights div {
+        font-size: 14px;
+    }
+}
